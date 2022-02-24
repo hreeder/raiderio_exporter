@@ -1,0 +1,37 @@
+global:
+  # raids configures which raids we will check
+  raids:
+  # - castle-nathria
+  # - sanctum-of-domination
+  - sepulcher-of-the-first-ones
+
+  # mplus_roles should contain the individual roles that can be checked from
+  # raider.io. These are in addition to the 'all' role that exists
+  mplus_roles:
+  - dps
+  - healer
+  - tank
+
+characters:
+  # name, region & realm should be the values in your raider.io character URL
+  # ie if eu/realm-five/character then we'd use
+  # name: character
+  # region: eu
+  # realm: realm-five
+- name: Character
+  region: eu
+  realm: realm-name
+  # Setting this to an empty list will cause it to only show 'all'
+  # providing a list here will append specific roles as well.
+  # Not providing this value will cause all values defined in global.mplus_roles to
+  # be used, alongside 'all'
+  mplus_roles: []
+  
+  # raids can be set to 'false' to disable raid metrics for this character
+  # raids can also be set to a list to override the global list of raids
+  # Default behaviour is to check the list of raids defined in global.raids
+  # raids: false
+
+- name: AltyMcAlterson
+  region: us
+  realm: illidan
